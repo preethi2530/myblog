@@ -1,0 +1,50 @@
+---
+# this is an empty front matter
+---
+
+
+<html>
+    <title>Preethi Chamarthi</title>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+        <body>
+          <nav>
+           <a href="/"><img src="logo1.png" width="150" height="50"></a>
+           <a href="blog.html">Blog</a>
+           <a href="about.html">About</a>
+           
+            <div class="social">
+              <a href="https://www.instagram.com/preethi_chamarthi/"><img src="instagram.svg" width="25" height="25"  ></a>
+              <a href="https://twitter.com/preethi2530?lang=en"><img src="twitter.svg" width="25" height="25"  ></a>
+              <a href="https://in.linkedin.com/in/jaya-preethi-chamarthi-38660b16b"><img src="linkedin.svg" width="25" height="25"  ></a>
+              <a href="https://twitter.com/preethi2530?lang=en"><img src="github.svg" width="25" height="25"  ></a>
+            </div>
+          </nav> 
+          <ul>
+          </body>
+           <section class="position">
+            <section class="cards-wrapper">
+              {% for post in site.posts %}
+               
+              <div class="card-grid-space">
+                
+                <a class="card" href="{{ post.url }}" style="--bg-img: url('{{ post.thumbnail }}');">
+                  <div>
+                    <h1> {{ post.title | upcase }} </h1>
+                    <p>{{ post.content | truncate: 30, '...' }}</p>
+                    <div class="date">{{ post.date  | truncate: 10, ''}}</div>
+                    <div class="tags">
+                      <div class="tag">html</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+             
+              {% endfor %}
+                 
+            </section>
+</section>
+
+    
+</html>
